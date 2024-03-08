@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "887b4b54-b976-451a-a3dc-2e0c24af7be7",
+		"name": "Fininfo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31444655"
+	},
+	"item": [
+		{
+			"name": "update_emp",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":8,\r\n    \"name\": \"xyz456789C445675\",\r\n    \"email\": \"xyz113183@gmail.com\",\r\n    \"age\": 25,\r\n    \"gender\": \"male\",\r\n    \"phoneNo\": \"9701969198\",\r\n    \"addressDetails\": {\r\n        \"hno\": \"123\",\r\n        \"street\": \"xyz\",\r\n        \"city\": \"xyz\",\r\n        \"state\": \"xyz\"\r\n    },\r\n    \"workExperience\": [\r\n        {\r\n            \"companyName\": \"xyz\",\r\n            \"fromDate\": \"20-05-2019\",\r\n            \"toDate\": \"20-09-2021\",\r\n            \"address\": \"xyz\"\r\n        }\r\n    ],\r\n    \"qualifications\": [\r\n        {\r\n            \"qualificationName\": \"ssc\",\r\n            \"fromDate\": \"20-05-2012\",\r\n            \"toDate\": \"20-05-2013\",\r\n            \"percentage\": 85\r\n        }\r\n    ],\r\n    \"projects\": [\r\n        {\r\n            \"title\": \"xyz\",\r\n            \"description\": \"description of the project\"\r\n        }\r\n    ],\r\n    \"photo\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d4lb67l993.execute-api.ap-southeast-2.amazonaws.com/fininfocom//fininfo-manage-employee",
+					"protocol": "https",
+					"host": [
+						"d4lb67l993",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"fininfocom",
+						"",
+						"fininfo-manage-employee"
+					],
+					"query": [
+						{
+							"key": "empID",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_emp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"xyz456789C445675\",\r\n    \"email\": \"xyz113183@gmail.com\",\r\n    \"age\": 25,\r\n    \"gender\": \"male\",\r\n    \"phoneNo\": \"9701969198\",\r\n    \"addressDetails\": {\r\n        \"hno\": \"123\",\r\n        \"street\": \"xyz\",\r\n        \"city\": \"xyz\",\r\n        \"state\": \"xyz\"\r\n    },\r\n    \"workExperience\": [\r\n        {\r\n            \"companyName\": \"xyz\",\r\n            \"fromDate\": \"20-05-2019\",\r\n            \"toDate\": \"20-09-2021\",\r\n            \"address\": \"xyz\"\r\n        }\r\n    ],\r\n    \"qualifications\": [\r\n        {\r\n            \"qualificationName\": \"ssc\",\r\n            \"fromDate\": \"20-05-2012\",\r\n            \"toDate\": \"20-05-2013\",\r\n            \"percentage\": 85\r\n        }\r\n    ],\r\n    \"projects\": [\r\n        {\r\n            \"title\": \"xyz\",\r\n            \"description\": \"description of the project\"\r\n        }\r\n    ],\r\n    \"photo\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d4lb67l993.execute-api.ap-southeast-2.amazonaws.com/fininfocom//fininfo-manage-employee",
+					"protocol": "https",
+					"host": [
+						"d4lb67l993",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"fininfocom",
+						"",
+						"fininfo-manage-employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_by_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d4lb67l993.execute-api.ap-southeast-2.amazonaws.com/fininfocom//fininfo-manage-employee?emp_Id=1",
+					"protocol": "https",
+					"host": [
+						"d4lb67l993",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"fininfocom",
+						"",
+						"fininfo-manage-employee"
+					],
+					"query": [
+						{
+							"key": "emp_Id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_emp_details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://d4lb67l993.execute-api.ap-southeast-2.amazonaws.com/fininfocom//fininfo-manage-employee",
+					"protocol": "https",
+					"host": [
+						"d4lb67l993",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"fininfocom",
+						"",
+						"fininfo-manage-employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del_emp",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"empID\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d4lb67l993.execute-api.ap-southeast-2.amazonaws.com/fininfocom//fininfo-manage-employee",
+					"protocol": "https",
+					"host": [
+						"d4lb67l993",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"fininfocom",
+						"",
+						"fininfo-manage-employee"
+					],
+					"query": [
+						{
+							"key": "emp_ID",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
